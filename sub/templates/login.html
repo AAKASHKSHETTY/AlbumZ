@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link rel="stylesheet" href="{% static 'login.css' %}" type="text/css">
+  </head>
+  <body>
+      <!-- form -->
+    <form class="loginbox" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+<!--        <img src="{% static 'img/login1.png' %}" class="login">-->
+        <h1>Login</h1>
+        <div class="form-group">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="Login">
+            <a href="{% url 'password_reset' %}">Forgot Password?</a><br>
+            <a href="{% url 'register' %}">New to NGOrphan?</a>
+        </div>
+    </form>
+    <script type="text/javascript">
+        window.onload = function(){
+        if ('{{message}}' != '')
+        {
+                 alert('{{ message }}');
+        }}
+
+    </script>
+    <!-- footer end -->
+</body>
+</html>

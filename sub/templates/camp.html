@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+        <link rel="stylesheet" href="{% static 'camp.css' %}" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock head %}
+
+{% block body %}
+<div id="blur">
+ <img src="{% static 'img/pod1.png' %}" class="img-fluid" alt="Responsive image" height="352px" width="1250px">
+
+
+<div class="page-wrapper">
+    <div class="post-slider">
+        <h1 class="slider-title"> Trending </h1>
+                <i class="fas fa-chevron-left prev"></i>
+                <i class="fas fa-chevron-right next"></i>
+            <div class="post-wrapper">
+
+                  {% for pos in data %}
+                <div class="post">
+                    <form action = "{% url 'camp' %}" method = "POST">
+                    {% csrf_token %}
+                    <img class="slider-image" src="{{ MEDIA_URL }}{{ pos.img }}" width="150px" height="150px">
+                    <div class="post-info">
+                        <h4>{{pos.title}}</h4>
+                        <i class="fas fa-user-alt" id = "artist"> {{pos.venue}}</i>
+                        <br>
+                        <i class="fas fa-dollar-sign" id = "cost">{{pos.time}}</i>
+
+<!--                        <input type="submit" class="btn" value="Add to Cart">-->
+                        <div class="apply_btn">
+                        <button class="boxed-btn3" type="submit">Cart</button>
+                        </div>
+
+                        <input type="hidden" name="user_name" value="{{ user.first_name }}"/>
+        <input type="hidden" name="title" value="{{pos.title}}"/>
+        <input type="hidden" name="venue" value="{{pos.venue}}"/>
+        <input type="hidden" name="time" value="{{pos.time}}"/>
+        <input type="hidden" name="date" value="{{pos.date}}"/>
+        <input type="hidden" name="month" value="{{pos.month}}"/>
+                    </div>
+
+                    </form>
+                </div>
+
+
+                {% endfor %}
+            </div>
+        </div>
+
+</div>
+
+
+
+<div class="page-wrapper2">
+    <div class="post-slider2">
+        <h1 class="slider-title2"> Retro </h1>
+        <div class="bl"> <i class="fas fa-chevron-left prev2"></i></div>
+                   <div class="bl"><i class="fas fa-chevron-right next2"></i></div>
+            <div class="post-wrapper2">
+
+                  {% for pos in data %}
+                <div class="post2">
+                    <form action = "{% url 'camp' %}" method = "POST">
+                    {% csrf_token %}
+                    <a href="#" onclick="toggle()"><img class="slider-image2" src="{{ MEDIA_URL }}{{ pos.img }}" width="150px" height="150px"></a>
+                <div class="post-info2">
+                        <h4>{{pos.title}}</h4>
+                    <i class="fas fa-user-alt" id = "artist1"> {{pos.venue}}</i>
+                    <br>
+                    <i class="fas fa-dollar-sign" id = "cost1">{{pos.time}}</i>
+                    <div class="apply_btn1">
+
+                        <button class="boxed-btn31" type="submit">Cart</button>
+                        </div>
+                                            <input type="hidden" name="user_name" value="{{ user.first_name }}"/>
+        <input type="hidden" name="title" value="{{pos.title}}"/>
+        <input type="hidden" name="venue" value="{{pos.venue}}"/>
+        <input type="hidden" name="time" value="{{pos.time}}"/>
+        <input type="hidden" name="date" value="{{pos.date}}"/>
+        <input type="hidden" name="month" value="{{pos.month}}"/>
+                    </div>
+                    </form>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+</div>
+</div>
+
+
+
+
+<!--<div id="container">-->
+<!--        <div class="card">-->
+<!--            <div class="shoeBackground">-->
+<!--                <img src="{% static 'img/a2.jpg' %}" alt="" height="550px" width="550px">-->
+<!--                <a href="#" class="share"><i class="fas fa-share-alt"></i></a>-->
+<!--            </div>-->
+<!--            <div class="info">-->
+<!--                <div class="shoeName">-->
+<!--                    <div class="info-head">-->
+<!--                        <a type="submit" onclick="toggle()" class="close"> <i class="fas fa-times"></i></a>-->
+<!--                        <h1 class="big"><span id = "title" /></h1>-->
+<!--                    </div>-->
+<!--                    <h3 class="small"><span id = "venue" /></h3>-->
+<!--                </div>-->
+<!--                <div class="description">-->
+<!--                    <h3 class="title">Product Info</h3>-->
+<!--                    <p class="text">{{description}}</p>-->
+<!--                </div>-->
+<!--                <div class="color-container">-->
+<!--                    <h3 class="title">Date of Release: </h3><br>-->
+<!--                </div>-->
+
+<!--                <div class="buy-price">-->
+<!--                    <a href="#" class="buy"><i class="fas fa-shopping-cart"></i>Add to Cart</a>-->
+<!--                    <div class="price">-->
+<!--                        <i class="fas fa-dollar-sign"></i>-->
+<!--                        <h1>{{price}}</h1>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <script type="text/javascript">
+        window.onload = function(){
+        if ('{{message}}' != '')
+        {
+                 alert('{{ message }}');
+        }}
+
+    </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script src="{% static 'js/camjs.js' %} " type="text/javascript"></script>
+
+{% endblock body %}
+
+
+
+
+<!--<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script>-->
+<!--<script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>-->
+<!--<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script>-->
+<!--<script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>-->
+
+

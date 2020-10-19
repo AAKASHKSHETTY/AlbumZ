@@ -1,0 +1,232 @@
+body {
+  background: #000000;
+}
+/*i:hover{*/
+/*    transform: scale(1.5);*/
+/*}*/
+
+#blur.active{
+  filter: blur(15px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.img-fluid{
+  margin: 50px 0 0 87px;
+  border: 5px solid white;
+}
+
+
+i{
+  color: #FFFFFF;
+}
+
+h1{
+  color: #FFFFFF;
+  font-size: 25px;
+  margin: 50px 0 0 50px;
+  padding-bottom: 30px;
+}
+
+h4{
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 9px;
+}
+
+.post-slider{
+  position: relative;
+}
+
+.post-slider .next{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.post-slider .prev{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+.post-slider .post-wrapper{
+  width: 89%;
+  height: 300px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.post-slider .post-wrapper .post{
+  width: 80px;
+  height: 250px;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.post-slider .post-wrapper .post .slider-image{
+  margin-left: 8px;
+}
+
+.post-slider .post-wrapper .post .post-info{
+  margin-left: 8px;
+}
+
+.post-slider .post-wrapper .post .post-info #artist{
+  margin-top: -17px;
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.slider-image:hover,.slider-image2:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+
+.post-slider2{
+  position: relative;
+}
+
+.post-slider2 .next2{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.post-slider2 .prev2{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+.post-slider2 .post-wrapper2{
+  width: 89%;
+  height: 300px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.post-slider2 .post-wrapper2 .post2{
+  width: 80px;
+  height: 250px;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.post-slider2 .post-wrapper2 .post2 .slider-image2{
+  margin-left: 8px;
+}
+
+.post-slider2 .post-wrapper2 .post2 .post-info2{
+  margin-left: 8px;
+}
+
+.post-slider2 .post-wrapper2 .post2 .post-info2 #artist1{
+  margin-top: -17px;
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+
+#cost{
+  color: #8E008E;
+  padding-top: 15px;
+    margin-top: 15px;
+  font-size: 20px;
+}
+
+#cost1{
+  color: #8E008E;
+  padding-top: 15px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+
+.boxed-btn3 {
+  position: absolute;
+  background: linear-gradient(#AA076B,#61045F);
+  color: #fff;
+  display: inline-block;
+  padding: 10px 10px 5px 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 80px;
+  border: 0;
+  border: 1px solid transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff !important;
+  text-transform: capitalize;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.boxed-btn3:hover {
+  color: #8E008E !important;
+  border: 1px solid #8E008E;
+  background: transparent;
+}
+
+.boxed-btn3:focus {
+  outline: none;
+}
+
+.apply_btn{
+  margin-bottom: 50px;
+}
+
+.boxed-btn31 {
+  position: absolute;
+  background: linear-gradient(#AA076B,#61045F);
+  color: #fff;
+  display: inline-block;
+  padding: 10px 10px 5px 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 80px;
+  border: 0;
+  border: 1px solid transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff !important;
+  text-transform: capitalize;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.boxed-btn31:hover {
+  color: #8E008E !important;
+  border: 1px solid #8E008E;
+  background: transparent;
+}
+
+.boxed-btn31:focus {
+  outline: none;
+}
+
+.apply_btn1{
+  margin-bottom: 50px;
+}

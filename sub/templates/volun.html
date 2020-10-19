@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block head %}
+    {% load static %}
+      <link rel="stylesheet" href="{% static 'volun.css' %}" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/bad733c527.js" crossorigin="anonymous"></script>
+{% endblock head %}
+
+{% block body %}
+
+      <!-- /.Image -->
+      <div class="cont">
+      <img src="{% static 'img/child.jpeg' %}" class="img-fluid" alt="Responsive image" height="900px" width="1500px">
+      <div class="center">Volunteer</div>
+      <div class="small"><h2><font color="#F05E23">with us</font><h2></div>
+      </div>
+      <div class="row">
+          <div class="col-md-4 text-center">
+              <div class="icon">
+                  <i class="fa fa-smile-o" aria-hidden="true" ></i>
+              </div>
+              <h3>Make them Happy</h3>
+              <p>express your opinions and perseptions about films and documentaries you have just seen. Let the people around you know about the latest trending movies and plays.</p>
+          </div>
+           <div class="col-md-4 text-center">
+              <div class="icon">
+                  <i class="fa fa-book"></i>
+              </div>
+              <h3>Teach and Learn</h3>
+              <p>You can also read the reviews written by other users online as soon as they are posted. Now you know which movies to watch and which movies to avoid.</p>
+          </div>
+           <div class="col-md-4
+                       text-center">
+              <div class="icon">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+              </div>
+              <h3>Certificate</h3>
+              <p>Let the reviewer know how amazing the review was and how it helped to watch the amazing movies and skip the boring ones.</p>
+          </div>
+      </div>
+
+<!-- contact start -->
+<div class="quotation_area ex_margin">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="quotation_text d-flex align-items-center justify-content-between">
+                    <div class="quotation_info">
+                        <h3>Want to join <br>
+                          <font color="#F05E23">NGOrphan Today!</font></h3>
+                            <p>Have any questions in mind?</p>
+                        <a href="#" class="boxed-btn3">Contact Us</a>
+                    </div>
+
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="sayhello d-flex align-items-center">
+                        <div class="num">
+                            <span>say Hello,</span>
+                            <h3>+44 563 986 4785 </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact end -->
+
+{% endblock body %}
