@@ -125,9 +125,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL='/home/'
 
+#For Emails
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'forwebsitepur@gmail.com'
-EMAIL_HOST_PASSWORD = 'Forwebsitepur@369'
+EMAIL_HOST_USER = 'YourEmail'
+EMAIL_HOST_PASSWORD = 'YourPassword'
 EMAIL_PORT = 587
